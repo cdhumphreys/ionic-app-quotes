@@ -5,7 +5,7 @@ import { MyApp } from './app.component';
 import { TabsPage } from '../pages/tabs/tabs';
 import { FavouritesPage } from '../pages/favourites/favourites';
 import { LibraryPage } from '../pages/library/library';
-import { SectionPage } from '../pages/section/section';
+import { QuotesPage } from '../pages/quotes/quotes';
 import { QuotePage } from '../pages/quote/quote';
 import { SettingsPage } from '../pages/settings/settings';
 
@@ -15,7 +15,7 @@ import { SettingsPage } from '../pages/settings/settings';
     TabsPage,
     FavouritesPage,
     LibraryPage,
-    SectionPage,
+    QuotesPage,
     QuotePage,
     SettingsPage
   ],
@@ -28,7 +28,7 @@ import { SettingsPage } from '../pages/settings/settings';
     TabsPage,
     FavouritesPage,
     LibraryPage,
-    SectionPage,
+    QuotesPage,
     QuotePage,
     SettingsPage
   ],
