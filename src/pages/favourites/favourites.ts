@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { ModalController } from 'ionic-angular';
 
 import { FavouritesService } from '../../services/favourites.service';
+import { SettingsService } from '../../services/settings.service';
+
 import { Quote } from '../../data/quote.interface';
 
 import { QuotePage } from '../quote/quote';
@@ -11,12 +13,12 @@ import { QuotePage } from '../quote/quote';
   templateUrl: 'favourites.html'
 })
 export class FavouritesPage {
-
   favouriteQuotes: Quote[];
 
   constructor(
       private favouritesService: FavouritesService,
-      private modalCtrl: ModalController
+      private modalCtrl: ModalController,
+      private settingsService: SettingsService
     ) {}
 
   ionViewWillEnter() {
@@ -38,5 +40,9 @@ export class FavouritesPage {
   removeFromFavourites(quote: Quote) {
     this.favouritesService.removeFromFavourites(quote);
     this.favouriteQuotes = this.favouritesService.getFavourites();
+  }
+
+  isAltBackground() {
+    return this.settingsService.getToggleStatus();
   }
 }
