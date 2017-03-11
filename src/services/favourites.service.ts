@@ -20,4 +20,10 @@ export class FavouritesService {
   getFavourites() {
     return this.favourites.slice();
   }
+
+  isQuoteFavourite(quote: Quote) {
+    return this.favourites.find((currentQuote: Quote) => {
+      return currentQuote.id == quote.id;
+    });
+  }
 }

@@ -29,7 +29,14 @@ export class FavouritesPage {
     modal.present();
 
     modal.onDidDismiss((remove: boolean) => {
-
+      if (remove) {
+        this.removeFromFavourites(quote);
+      }
     });
+  }
+
+  removeFromFavourites(quote: Quote) {
+    this.favouritesService.removeFromFavourites(quote);
+    this.favouriteQuotes = this.favouritesService.getFavourites();
   }
 }

@@ -49,4 +49,12 @@ export class QuotesPage implements OnInit {
     alert.present();
   }
 
+  onRemoveFromFavourites(quote: Quote) {
+    this.favouritesService.removeFromFavourites(quote);
+  }
+
+  isFavourite(quote: Quote) {
+    return this.favouritesService.isQuoteFavourite(quote);
+  }
+
 }
